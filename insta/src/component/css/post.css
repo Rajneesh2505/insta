@@ -1,0 +1,25 @@
+.post-container{
+    height:70vh;
+    width:60vh;
+    border:1px solid rgb(0,0,0,.4);
+    margin:1em auto;
+}
+.post-head{
+    margin:0 .6em;
+}
+.post-date{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:1em 0;
+}
+.post-description{
+    margin:2em 1em
+}
+.newpost{
+    height:18em;
+    width:23em;
+    border:1px solid rgb(0,0,0,.7);
+    margin: 5em auto;
+    background-color: rgb(156, 161, 169);
+}
