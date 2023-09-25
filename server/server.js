@@ -8,7 +8,7 @@ const postController=require("./routes/post")
 
 
 //Database connection
-mongoose.connect(process.env.MONGOS_URL)
+mongoose.connect(process.env.MONGO_URL)
 
 
 //body parser middleware
