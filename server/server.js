@@ -8,7 +8,7 @@ const postController=require("./routes/post")
 
 
 //Database connection
-mongoose.connect("mongodb://127.0.0.1:27017/insta")
+mongoose.connect(process.env.MONGOS_URL)
 
 
 //body parser middleware
