@@ -18,19 +18,15 @@ const LogIn=()=>{
         axios({
         url:"http://localhost:3000/user/login",
         method:"POST",
-        headers:{},
-        data:user
+        headers:{"content-type":"application/json"},
+        data:JSON.stringify(user)
     }).then((user)=>{
+        console.log(user)
     localStorage.setItem("Token",user.data.authToken)
     localStorage.Token==="undefined" ? navigate("/") :navigate("/post")
     }).catch((err)=>{
         console.log(err)
     })
-    // if(await localStorage.length){
-    //     navigate("/post")
-    // }else{
-    //     navigate("/")
-    // }
     
     }
     }

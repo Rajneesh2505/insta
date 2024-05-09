@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express=require("express")
 const app=express()
 const mongoose=require("mongoose")
@@ -17,7 +18,7 @@ app.use(express.urlencoded({extended:false}))
 app.use(multer.array())
 app.use(cors())
 //Server
-const PORT=process.env.PORT || 3000
+const PORT= 3000
 app.listen(PORT,(req,err)=>{
     if(err){
         console.log(err)

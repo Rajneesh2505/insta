@@ -7,7 +7,6 @@ const crypto = require("crypto")
 const jwt = require("jsonwebtoken")
 
 const secretKey = crypto.randomBytes(64).toString("hex")
-let salt = 10;
 route.post("/signup", async (req, res) => {
    if (await validUser(req.body.username)) {
       res.send(`${req.body.username} already exist!!!`)

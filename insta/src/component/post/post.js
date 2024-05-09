@@ -43,10 +43,10 @@ for(let i=post.length-1;i>=0;i--){
                         </div>
                      </div>
                      <div className="post-img">
-                        <img src={post.PostImage} height={"280em"} width={"422.2em"} alt={"post Image"}/>
+                        <img src={post.PostImage} height={"280em"} width={"415.5em"} alt={"post"}/>
                      </div>
                      <div className="post-date">
-                        <div><img src={flag?Like:Unlike} onClick={handleFlag} height={"60em"} style={{margin:"-1em 0.4em"}}/></div>
+                        <div><img src={flag?Like:Unlike} onClick={handleFlag} height={"60em"} style={{margin:"-1em 0.4em"}} alt={"post-date"}/></div>
                         <div>{post.date.slice(4,16)}</div>
                      </div>
                      <div style={{margin:"-.6em 1.9em"}}>{counter}</div>
