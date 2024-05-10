@@ -16,7 +16,13 @@ mongoose.connect("mongodb://127.0.0.1:27017/insta")
 app.use(express.json({limit:"10mb",extended:true}))
 app.use(express.urlencoded({extended:false}))
 app.use(multer.array())
-app.use(cors())
+app.use(cors(
+     {
+        origin:{"https://insta-gilt.vercel.app"},
+        methods:["POST","GET"],
+        credentials:true
+    }
+))
 //Server
 const PORT= 3000
 app.listen(PORT,(req,err)=>{
