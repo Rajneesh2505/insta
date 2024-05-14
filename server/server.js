@@ -9,7 +9,7 @@ const postController=require("./routes/post")
 
 
 //Database connection
-mongoose.connect("mongodb://127.0.0.1:27017/insta")
+mongoose.connect("mongodb+srv://Rajneesh:Rajneesh@insta.wzmicqy.mongodb.net/insta?retryWrites=true&w=majority&appName=insta")
 
 
 //body parser middleware
@@ -18,7 +18,7 @@ app.use(express.urlencoded({extended:false}))
 app.use(multer.array())
 app.use(cors())
 //Server
-const PORT= 3000
+const PORT= process.env.PORT || 3000
 app.listen(PORT,(req,err)=>{
     if(err){
         console.log(err)
